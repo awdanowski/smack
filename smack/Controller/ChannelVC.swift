@@ -10,7 +10,15 @@ import UIKit
 
 class ChannelVC: UIViewController {
 
-    override func viewDidLoad() {
+	// Outlets
+	@IBOutlet weak var loginButton: UIButton!
+	
+	@IBAction func loginButtonPressed(_ sender: Any) {
+		
+		performSegue(withIdentifier: TO_LOGIN, sender: nil)
+		
+	}
+	override func viewDidLoad() {
         super.viewDidLoad()
 
 		// Set how far the viewcontroller swipes open
