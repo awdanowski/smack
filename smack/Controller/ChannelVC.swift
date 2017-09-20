@@ -13,6 +13,7 @@ class ChannelVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		// Set how far the viewcontroller swipes open
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
 		
     }

@@ -17,8 +17,10 @@ class ChatVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		// Connect the hamburger button to the reveal controller action
 		menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
 		
+		// Add swipe and tap actions to open and close the view controller
 		self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 		self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
     }
